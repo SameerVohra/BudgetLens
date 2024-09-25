@@ -8,7 +8,7 @@ import GetExpenses from "./controllers/GetExpenses";
 
 const app = express();
 app.use(express.json());
-app.use(cors({origin: "*"}));
+app.use(cors({origin:"*", methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],}))
 
 app.post("/register", Register);
 app.post("/login", Login);
