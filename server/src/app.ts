@@ -11,7 +11,7 @@ import { GetMonthlyExpense } from "./Controllers/GetMonthlyExpense";
 const app = express();
 
 app.use(express.json());
-app.use(cors({origin:"*", methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],}))
+app.use(cors({ origin: "*", methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], }))
 
 app.post("/register", Register);
 app.post("/login", Login)
