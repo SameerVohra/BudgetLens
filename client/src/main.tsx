@@ -1,32 +1,32 @@
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Login from './components/Login.tsx';
-import Register from './components/Register.tsx';
-import Home from './components/Home.tsx';
+import App from './App.tsx'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Login from './Components/Login.tsx'
+import Register from './Components/Register.tsx'
+import Home from './Components/Home.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/",
-        element: <Login/>
+        element: <Login />
       },
       {
-        path: "/register",
-        element: <Register/>
+        path: "/sign-up",
+        element: <Register />
       },
       {
-        path: "/home/:uId",
-        element: <Home/>
+        path: "/home",
+        element: <Home />
       }
     ]
   }
 ])
 
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router}/>
+  <RouterProvider router={router} />
 )
